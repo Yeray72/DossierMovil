@@ -21,20 +21,39 @@
             overflow: hidden;
         }
 
-       @media (max-width: 768px) {
-             .grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas en móviles */
+     @media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+        margin: 10px; /* Reduce los márgenes */
     }
+
     .item img {
-        max-width: 90%; /* Asegura que las imágenes se ajusten bien */
+        max-width: 100%; /* Asegúrate de que las imágenes se ajusten al contenedor */
+    }
+
+    .back-button {
+        font-size: 1rem; /* Reduce el tamaño del botón */
+        padding: 8px; /* Reduce el padding */
+    }
+
+    .item span {
+        font-size: 1rem; /* Reduce el tamaño del texto */
     }
 }
 
-        h1 {
-            text-align: center;
-            color: #333;
-            margin: 20px 0;
-        }
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 10px; /* Más separación entre filas */
+    }
+
+    .item img {
+        max-width: 90%; /* Reduce ligeramente el tamaño de las imágenes */
+    }
+}
+
+
+      
 
          .back-button {
             position: fixed;
@@ -60,15 +79,15 @@
         }
         .image-grid {
            display: grid;
-            grid-template-columns: repeat(4, 1fr); /* Cuatro columnas */
-            gap: 10px; /* Separación entre las imágenes */
+            grid-template-columns: repeat(2, 1fr); /* Cuatro columnas */
+            gap: 5px; /* Separación entre las imágenes */
             text-align: center;
-            margin-left: 100px;
-            margin-right: 150px;
+            margin-left: 950px;
+            margin-right: 650px;
         }
 
         .image-grid img {
-            width: 100%;
+            width: 60%;
             border-radius: 5px;
             cursor: pointer;
             transition: transform 0.3s ease;
@@ -84,17 +103,17 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 60%;
+            height: 60%;
             background-color: rgba(0, 0, 0, 0.8);
-            z-index: 1000;
+            z-index: 100;
             justify-content: center;
             align-items: center;
         }
 
         .image-viewer img {
-            max-width: 100%;
-            max-height: 100%;
+            max-width: 30%;
+            max-height: 30%;
             border-radius: 5px;
         }
 
