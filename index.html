@@ -11,6 +11,37 @@
             src: url('FSJoy-Regular.woff2') format('woff2'), url('FSJoy-Regular.woff') format('woff');
         }
 
+      @media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas */
+        margin: 10px; /* Reduce los márgenes */
+    }
+
+    .item img {
+        max-width: 100%; /* Asegúrate de que las imágenes se ajusten al contenedor */
+    }
+
+    .back-button {
+        font-size: 1rem; /* Reduce el tamaño del botón */
+        padding: 8px; /* Reduce el padding */
+    }
+
+    .item span {
+        font-size: 1rem; /* Reduce el tamaño del texto */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 10px; /* Más separación entre filas */
+    }
+
+    .item img {
+        max-width: 90%; /* Reduce ligeramente el tamaño de las imágenes */
+    }
+}
+  
         body {
             margin: 0;
             padding: 0;
